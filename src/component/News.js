@@ -17,7 +17,7 @@ export class News extends Component {
   }
   async componentDidMount(){
     console.log("cdm")
-    let url="https://newsapi.org/v2/top-headlines?country=in&apiKey=84df7e4b3bf44883b52b57e69614f50f&page=1&pageSize=20"
+    let url=""
     let data=await fetch(url)
     let parsedata=await data.json()
     console.log(parsedata)
@@ -26,7 +26,7 @@ export class News extends Component {
   }
 handleNextClick=  async  ()=>{
     if(!(this.state.page+1>Math.ceil(this.state.totalArticles/20))){
-      let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=84df7e4b3bf44883b52b57e69614f50f&page=${this.state.page+1}&pageSize=20`;
+      let url=``;
       this.setState({loading:true})
       let data=await fetch(url);
       let parsedata=await data.json();
